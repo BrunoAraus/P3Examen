@@ -1,0 +1,94 @@
+{% extends 'core/template.html' %}
+{% load static %}
+
+{% block contenido %}
+<head>
+    <link rel="stylesheet" href="{% static 'core/css/pedido.css' %}">
+</head>
+    <div id="cuerpo">
+        <div id="contenedor_fondo">
+            <div id="fondo_carrito">
+                <div id="carrito_left">
+                    <div class="titulo"><p>TUS PEDIDOS</p><hr></div>
+                    <div id="lista_venta">
+
+                        <div class="descripcion">
+                            <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2020/03/Platos-de-comida-que-pides-a-domicilio-y-puedes-hacer-en-casa_2.jpg" class="rounded" alt="" width="15%">                        
+                            <div class="info">
+                                <h6>"CAMBIAR NOMBRE"</h6>
+                                <h7>Precio = $12.000</h7>
+                                <p id="disponible">Estado: Disponible</p>
+                                <p class="desc">Precio Delivery: $2.800</p>
+                                <p class="desc">Descuento: No disponible</p>
+                                <div class="col-md-2">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr>
+                        
+                        <div class="descripcion">
+                            <img src="https://static.vecteezy.com/system/resources/previews/003/734/215/non_2x/plates-with-fast-food-and-healthy-food-top-view-flat-lay-photo.jpg" class="rounded" alt="" width="15%"> 
+                            <div class="info">
+                                <h6>"CAMBIAR NOMBRE"</h6>
+                                <h7>Precio = $16.100</h7>
+                                <p id="disponible">Estado: Disponible</p>
+                                <p class="desc">Precio Delivery: ...</p>
+                                <p class="desc">Descuento: No disponible</p>
+                                <div class="col-md-2">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                        <div class="descripcion">
+                            <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2016/01/25/14537470628101.jpg" class="rounded" alt="" width="15%"> 
+                            <div class="info">
+                                <h6>"CAMBIAR NOMBRE"</h6>
+                                <h7>Precio = $16.100</h7>
+                                <p id="disponible">Estado: Disponible</p>
+                                <p class="desc">Precio Delivery: ...</p>
+                                <p class="desc">Descuento: No disponible</p>
+                                <div class="col-md-2">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div id="carrito_right">
+                    <h5>Resumen de Pedidos</h5>
+                    <div class="resumen_compra">
+                        <h6>3 Artículos</h6>
+                        <p>$ 28.100</p>
+                    </div>
+                    <div class="resumen_compra">
+                        <h6>Delivery</h6>
+                        <p>$2.800</p>
+                    </div>
+                    <div class="resumen_compra">
+                        <h6>Tiempo Estimado</h6>
+                        <p>~15 Minutos</p>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <p>Total</p>
+                        <p>$ 30.900</p>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-info" >Finalizar compra</button>
+                    </div>
+                </div>
+                
+            </div> 
+            <div id="volver">
+                <div>
+                    <button type="submit" class="btn btn-info" href="index.html">Seguir comprando</button>
+                </div>
+            </div>
+        </div>        
+    </div>    
+{% endblock %}

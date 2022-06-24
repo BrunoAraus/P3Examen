@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaFood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/Mainestilo.css' %}">
+</head>
+<body>
+    <header>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <div class="principal">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffffff00;">
+        <a id="titulo" href="{% url 'home' %}">
+        <img src="{% static 'core/img/Comida.png' %}" alt="logo" width="90px">
+        <div>InstaFood</div>
+        </a>
+        <div id="menu">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'home' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'pedido' %}">Mi pedido</a>
+            </li>
+            <li class="nav-item">
+            {% if user.is_authenticated %}
+                <b>{{user.username}}</b>
+                <a href="{% url 'logout' %}">Cerrar sesion</a>
+            {% else %}
+                <a href="{% url 'login' %}">Iniciar Sesion</a>
+            {% endif %}
+            </li>
+            <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link active" href="{% url 'usuario' %}">Mi cuenta</a>
+            {% else %}
+            {% endif %}
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </div>
+    </header>
+    <div>
+        {% block contenido %}
+
+        {% endblock %}
+    </div>
+    <footer>
+        Duoc 2022 - Todos los derechos reservados.
+    </footer>
+</body>
+</html>

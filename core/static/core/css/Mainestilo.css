@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: cadetblue;
+}
+
+.principal>.navbar{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    background:  linear-gradient(to left, rgb(69, 230, 195) 0%, rgb(45, 122, 223) 100%);
+    position: fixed;
+    z-index: 100;
+}
+.imagen{
+    height:420px;
+}
+
+.cuerpo{
+    background-image: url("https://img.freepik.com/free-vector/fast-food-sketches-seamless-pattern-delicious-food-colored-ornament-hand-drawn-vector-illustration-modern-style-design-decor-wallpaper-background-textile_534604-529.jpg?w=2000");
+    min-height: 170vh;
+}
+
+#menu{
+    padding: 0% 0% 0% 45%;
+    margin: 0% 0% 0% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+b{
+    padding-right: 10%;
+}
+
+.nav-item{
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: 'Knewave', cursive;
+    color: #ffffff;
+    margin-left: 4%;
+    padding: 0.1% 0.1% 0.1% 0.1%;
+}
+
+a{text-decoration: none; font-size: smaller;}
+a:visited{color: #ffffff;}
+
+
+input{
+    margin-right: 10px;
+    
+}
+
+#texto{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 135px;
+}
+
+#destacados{
+    padding-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 50, 90, 0.774);
+}
+
+
+h3{
+    margin: 0 10px 0 0;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    margin: 0 0 0 2%;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.caro{
+    padding-top: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    margin: 50px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-color: rgb(5, 5, 5);
+    padding-bottom: 1px;
+    background-color:rgba(164, 193, 221, 0.603);
+    color: #ffffff
+    ;
+}
+
+#cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #272727e3;
+}
+
+#cartas>p{
+    font-size: x-small;
+}
+
+
+.card>img{
+    height: 150px;
+    border: solid rgb(208, 255, 0);
+    border-style: groove;
+    border-radius: 10%;
+}
+
+@media(max-width: 830px ){
+    .principal{
+        position: static;
+    }
+    
+    #menu{
+        flex-direction: column;
+        
+    }
+    #destacados{
+        display: none;
+    }
+}
+@media(max-width: 1145px){
+
+
+    #Buscador{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 0px ;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+    }
+    .imagen{
+        width: 100%;
+        height: 100%;
+    }
+    #Buscador>h4{
+        display: none;
+    }
+}
+
+
+.container{
+    background-color: #ffffff;
+}

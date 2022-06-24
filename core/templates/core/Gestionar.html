@@ -1,0 +1,40 @@
+{% extends 'core/template.html' %}
+{% load static %}
+
+
+
+{% block contenido %}
+<head>
+    <link rel="stylesheet" href="{% static 'core/css/Crear.css' %}">
+</head>
+{% if not user.is_staff %}
+<h5>Permisos insuficientes</h5>
+<a href="{% url 'home' %}">volver</a>
+{% else %}
+<div class="cuerpo">
+    <div class="container">
+        <h5>Listado de Platos</h5>
+    <table class="table table-hover">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descuento</th>
+            <th>Entrega</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        {% for i in plato %}
+        <tr>
+            <td>{{i.nombre}}</td>
+            <td>{{i.precio}}</td>
+            <td>{{i.descuento}}</td>
+            <td>{{i.categoria}}</td>
+            <td><a href="{% url 'modificarPlato' i.nombre %}">Modificar</a></td>
+            <td><a href="{% url 'eliminarPlato' i.nombre %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+    </div>
+{% endif %}
+{% endblock %}

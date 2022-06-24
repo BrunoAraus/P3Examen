@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.cuerpo{
+    min-height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
+#editar{
+    display: flex;
+    justify-content: center;
+}
+
+#misDatos{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    width: 70%;
+}
+#misDatos>div{
+    width: 23%;
+}
+
+#izquierda{
+    padding-right: 20px;
+    text-align: start;
+}
+
+#derecha{
+    text-align: left;
+    padding-left: 0.3px;
+}
+
+#izquierda>p, #derecha>p{
+    padding: 5px 10px 5px 10px;
+}
+
+#izquierda>p{
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+
+#derecha>p{
+    background-color: #ffffff;
+}
+
+button{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color:salmon;
+
+}
+
+button>a{
+    text-decoration: none;
+    color: #ffffff;   
+}
+
+
+@media(max-width: 950px ){
+    .principal{
+        flex-direction: column;
+        align-items: center;
+        position: sticky;
+    }
+}
+
+    
+@media(max-width: 1200px){
+    #misDatos{
+        padding-top: 10px;
+        width: 100%;
+    }
+    #misDatos>div{
+        width: 33%;
+    }
+    #izquierda{
+        padding-right: 3%;
+    }
+    #izquierda>p{
+        width: 100%;
+        padding-right: 0px;
+    }
+    .cuerpo{
+        padding-top: 1px;
+    }
+}
