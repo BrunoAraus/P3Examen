@@ -11,11 +11,11 @@
 {% else %}
 <div class="cuerpo">
 <div class="container">
-    <h5>Subir Plato</h5>
+    <h5>Modificar Producto</h5>
     <form action="" method="post">
         {% csrf_token %}
         {{form|crispy}}
-        <button type="submit" class="btn btn-secondary">Subir</button>
+        <button type="submit" class="btn btn-secondary">Modificar</button>
     </form>
 </div>
 </div>

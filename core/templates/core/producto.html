@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="{% static 'core/css/producto.css' %}">
 </head>
     <div class="cuerpo">
-        <img src="{{plato.imagen}}" alt="">
+        <img src="{{producto.imagen}}" alt="">
         <div id="contenidocuerpo">
-            <h1>Nombre: {{plato.nombre}}</h1>
-            <p>- Precio: ${{plato.precio}}</p>
-            <p>- Descuento: {{plato.descuento}}%</p>
-            <p>Tipo de Entrega: {{plato.categoria}}</p>
+            <h1>Nombre: {{producto.nombre}}</h1>
+            <p>-Precio: ${{producto.precio}}</p>
+            <p>-Stock: {{producto.stock}} unidades</p>
+            <p>-Descuento: {{producto.descuento}}%</p>
+            <p>-Categoria: {{producto.categoria}}</p>
             <div id="botoncomprar">
                 <a href="{% url 'home' %}"><h1>Comprar</h1></a>
             </div>

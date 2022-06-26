@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from core.forms import PlatoForm
+from core.forms import ProductoForm
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 
@@ -19,11 +19,11 @@ def registro(request):
 
 
 def home(request):
-    contexto = {'plato': Plato.objects.all()}
+    contexto = {'producto': Producto.objects.all()}
     return render(request, 'core/index.html',contexto)
 
 def Gestionar(request):
-    contexto = {'plato': Plato.objects.all()}
+    contexto = {'producto': Producto.objects.all()}
     return render(request, 'core/Gestionar.html',contexto)
 
 def usuario(request):
@@ -36,33 +36,45 @@ def pedido(request):
     return render(request, 'core/pedido.html')
 
 
-def CrearPlato(request):
-    contexto = {'form': PlatoForm()}
+def CrearProducto(request):
+    contexto = {'form': ProductoForm()}
     if request.method == "POST":
-        Plato = PlatoForm(request.POST)
-        if Plato.is_valid:
-            Plato.save()
-            contexto["mensaje"] = "Plato agregado!."
-    return render(request, 'core/CrearPlato.html', contexto)
+        Producto = ProductoForm(request.POST)
+        if Producto.is_valid:
+            Producto.save()
+            contexto["mensaje"] = "Producto agregado!."
+    return render(request, 'core/CrearProducto.html', contexto)
 
-def modificarPlato(request, id):
-    plato = Plato.objects.get(nombre=id)
-    contexto = {'form': PlatoForm(instance=plato)}
+def modificarProducto(request, id):
+    producto = Producto.objects.get(nombre=id)
+    contexto = {'form': ProductoForm(instance=producto)}
     if request.method == "POST":
-        plato = PlatoForm(request.POST, instance=plato)
-        if plato.is_valid:
-            plato.save()
-            contexto["mensaje"] = "plato modificado!."
-            contexto['form'] = plato
-    return render(request, 'core/modificarPlato.html', contexto)
+        producto = ProductoForm(request.POST, instance=producto)
+        if producto.is_valid:
+            producto.save()
+            contexto["mensaje"] = "producto modificado!."
+            contexto['form'] = producto
+    return render(request, 'core/modificarProducto.html', contexto)
 
-def eliminarPlato(request, id):
-    plato = Plato.objects.get(nombre=id)
-    plato.delete()
+def eliminarProducto(request, id):
+    producto = Producto.objects.get(nombre=id)
+    producto.delete()
     return redirect(to="Gestionar")
 
 
 def producto(request, id):
-    plato = Plato.objects.get(nombre=id)
-    contexto = {'plato': plato}
+    producto = Producto.objects.get(nombre=id)
+    contexto = {'producto': producto}
     return render(request, 'core/producto.html', contexto)
+
+
+
+def ComprarProducto(request, id):
+    producto = Producto.objects.get(nombre=id)
+    return redirect(to="home")
+
+
+
+
+
+

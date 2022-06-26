@@ -13,13 +13,14 @@
 {% else %}
 <div class="cuerpo">
     <div class="container">
-        <h5>Listado de Platos</h5>
+        <h5>Listado de Producto</h5>
     <table class="table table-hover">
         <tr>
             <th>Nombre</th>
             <th>Precio</th>
+            <th>Stock</th>
             <th>Descuento</th>
-            <th>Entrega</th>
+            <th>Categoria</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>
@@ -27,10 +28,11 @@
         <tr>
             <td>{{i.nombre}}</td>
             <td>{{i.precio}}</td>
+            <td>{{i.stock}}</td>
             <td>{{i.descuento}}</td>
             <td>{{i.categoria}}</td>
-            <td><a href="{% url 'modificarPlato' i.nombre %}">Modificar</a></td>
-            <td><a href="{% url 'eliminarPlato' i.nombre %}">Eliminar</a></td>
+            <td><a href="{% url 'modificarProducto' i.nombre %}">Modificar</a></td>
+            <td><a href="{% url 'eliminarProducto' i.nombre %}">Eliminar</a></td>
         </tr>
         {% endfor %}
     </table>

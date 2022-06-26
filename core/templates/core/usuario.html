@@ -10,24 +10,18 @@
         <div id="misDatos">
             <div id="izquierda">
                 <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Correo: </p>
-                <p>Usuario: </p>
                 <p>Contraseña: </p>
             </div>
             <div id="derecha">
-                <p>Bruno Araus</p>
-                <p>19</p>
-                <p>br.araus@duocuc.cl</p>
-                <p>Bruniodas</p>
-                <p>123456789</p>
+                <p>{{user.username}}</p>
+                <p>{{user.password}}</p>
             </div>
         </div>
         {% if not user.is_staff %}
         {% else %}
         <div id="Botones">
-            <button><a href="{% url 'Gestionar' %}">Gestionar Platos</a></button>
-            <button><a href="{% url 'CrearPlato' %}">Agregar Platos</a></button>
+            <button><a href="{% url 'Gestionar' %}">Gestionar Producto</a></button>
+            <button><a href="{% url 'CrearProducto' %}">Agregar Producto</a></button>
         </div>
     </div>
         {% endif %}
