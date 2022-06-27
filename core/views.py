@@ -68,5 +68,3 @@ def producto(request, id):
     return render(request, 'core/producto.html', contexto)
 
 
-
-
