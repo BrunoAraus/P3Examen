@@ -69,12 +69,4 @@ def producto(request, id):
 
 
 
-def ComprarProducto(request, id):
-    producto = Producto.objects.get(nombre=id)
-    return redirect(to="home")
-
-
-
-
-
 
