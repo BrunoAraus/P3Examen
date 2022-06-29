@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    
     width: 100%;
     background:  linear-gradient(to left, rgb(230, 179, 69) 0%, rgb(187, 128, 41) 100%);
     position: fixed;
