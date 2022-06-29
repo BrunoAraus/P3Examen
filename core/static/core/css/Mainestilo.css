@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -9,16 +10,17 @@
     justify-content: center;
     justify-content: space-between;
     width: 100%;
-    background:  linear-gradient(to left, rgb(69, 230, 195) 0%, rgb(45, 122, 223) 100%);
+    background:  linear-gradient(to left, rgb(230, 179, 69) 0%, rgb(187, 128, 41) 100%);
     position: fixed;
     z-index: 100;
 }
 .imagen{
     height:420px;
+    width:100%;
 }
 
 .cuerpo{
-    background-image: url("https://img.freepik.com/free-vector/fast-food-sketches-seamless-pattern-delicious-food-colored-ornament-hand-drawn-vector-illustration-modern-style-design-decor-wallpaper-background-textile_534604-529.jpg?w=2000");
+    background-color: rgba(231, 189, 71, 0.616);                    
     min-height: 170vh;
 }
 
@@ -54,7 +56,7 @@ b{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Knewave', cursive;
     color: #ffffff;
     margin-left: 4%;
