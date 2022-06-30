@@ -67,4 +67,10 @@ def producto(request, id):
     contexto = {'producto': producto}
     return render(request, 'core/producto.html', contexto)
 
+def descontar(request, id):
+    producto = Producto.objects.get(nombre=id)
+    producto.stock = producto.stock - 1
+    producto.save()
+    return redirect(to="home")
+
 

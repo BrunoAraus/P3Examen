@@ -15,7 +15,7 @@
             <p>-Descuento: {{producto.descuento}}%</p>
             <p>-Categoria: {{producto.categoria}}</p>
             <div id="botoncomprar">
-                <a href="{% url 'home' %}"><h1>Comprar</h1></a>
+                <a href="{% url 'descontar' producto.nombre %}"><h1>Comprar</h1></a>
             </div>
         </div>
     </div>

@@ -13,6 +13,7 @@ urlpatterns = [
     path('eliminarProducto/<id>', eliminarProducto, name="eliminarProducto"),
     path('modificarProducto/<id>', modificarProducto, name="modificarProducto"),
     path('producto/<id>', producto, name="producto"),
+    path('descontar/<id>', descontar, name="descontar"),
     path('login', LoginView.as_view(template_name='core/login.html'), name="login"),
     path('logout', LogoutView.as_view(template_name='core/logout.html'), name="logout"),
     path('registro', registro,name="registro"),
