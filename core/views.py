@@ -74,3 +74,5 @@ def descontar(request, id):
     return redirect(to="home")
 
 
+
+
