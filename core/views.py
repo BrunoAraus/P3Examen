@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from core.forms import ProductoForm
+from core.forms import ProductoForm, SuscripcionForm
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 
@@ -78,3 +78,14 @@ def descuento(request,id):
     producto.precio_final = producto.precio - (producto.precio * producto.descuento/100)
     producto.save()
     return redirect(to="home")
+
+def suscribir(request):
+    contexto = {'form': SuscripcionForm()}
+    if request.method == "POST":
+        Suscripcion = SuscripcionForm(request.POST)
+        if Suscripcion.is_valid:
+            Suscripcion.save()
+            contexto["mensaje"] = "Suscripcion Realizada!."
+    return render(request, 'core/suscribir.html', contexto)
+
+    

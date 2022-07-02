@@ -20,6 +20,14 @@ class Producto(models.Model):
     def __str__(self) -> str:
         return self.nombre
 
+class Suscripciones(models.Model):
+    codigo = models.CharField(primary_key=True, max_length=10)
+    usuario = models.CharField(max_length=30)
+    estado = models.BooleanField(null=True)
+
+    def __str__(self) -> str:
+        return self.codigo
+
 
 
 

@@ -17,13 +17,12 @@
         </div>
         {% if not user.is_staff %}
         <div>
-        <button><a href="#">Suscribir</a></button>
+        <button><a href="{% url 'suscribir' %}">Suscribir</a></button>
         </div>
         {% else %}
         <div id="Botones">
             <button><a href="{% url 'Gestionar' %}">Gestionar Producto</a></button>
             <button><a href="{% url 'CrearProducto' %}">Agregar Producto</a></button>
-            <button><a href="#">Suscribir</a></button>
         </div>
     </div>
         {% endif %}

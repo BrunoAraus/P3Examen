@@ -9,6 +9,7 @@ urlpatterns = [
     path('historial', historial,name="historial"),
     path('pedido', pedido,name="pedido"),
     path('CrearProducto', CrearProducto, name="CrearProducto"),
+    path('suscribir', suscribir, name="suscribir"),
     path('Gestionar', Gestionar, name="Gestionar"),
     path('eliminarProducto/<id>', eliminarProducto, name="eliminarProducto"),
     path('modificarProducto/<id>', modificarProducto, name="modificarProducto"),

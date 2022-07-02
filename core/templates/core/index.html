@@ -16,7 +16,7 @@
               <img src="https://www.pethappy.cl/imagenes/slider/0306062412_1280x380.png" class="imagen" alt="Primer auto">
             </div>
             <div class="carousel-item">
-              <img src="{% static 'core/img/fondo.png' %}" class="imagen" alt="segundo auto" >
+              <img src="https://static.miscota.com/media/1/photos/products/109869/collar-perro-reflectante-rosa_1_g.jpeg" class="imagen" alt="segundo auto" >
             </div>
             <div class="carousel-item">
               <img src="https://www.pethappy.cl/imagenes/slider/1904121918_banner-active-defense-1280x340-gato.png" class="imagen" alt="...">
@@ -50,7 +50,7 @@
           {% if c.descuento > 0 %}
           <p class="card-text">Descuento: {{c.descuento}}%</p>
           {% endif %}
-          <a href="{% url 'producto' c.nombre%}" class="btn btn-primary">Ver producto</a>
+          <a href="{% url 'producto' c.nombre %}" class="btn btn-primary">Ver producto</a>
         </div>
       </div>
       {% endfor %}
