@@ -109,4 +109,8 @@ h5{
         display: flex;
         justify-content: space-evenly;
     }
+    
+    #carrito_right{
+        margin: auto;
+    }
 }

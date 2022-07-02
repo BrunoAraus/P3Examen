@@ -10,9 +10,15 @@
         <img src="{{producto.imagen}}" alt="">
         <div id="contenidocuerpo">
             <h1>Nombre: {{producto.nombre}}</h1>
+            {% if producto.descuento > 0 %}
+            <p>-Precio Oferta ${{producto.precio_final}}</p>
+            {% else %}
             <p>-Precio: ${{producto.precio}}</p>
+            {% endif %}
             <p>-Stock: {{producto.stock}} unidades</p>
+            {% if producto.descuento > 0 %}
             <p>-Descuento: {{producto.descuento}}%</p>
+            {% endif %}
             <p>-Categoria: {{producto.categoria}}</p>
             <div id="botoncomprar">
                 <a href="{% url 'descontar' producto.nombre %}"><h1>Comprar</h1></a>

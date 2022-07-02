@@ -14,7 +14,7 @@ b{
     
     width: 100%;
     background:  linear-gradient(to right, rgb(241, 98, 42) 0%, rgb(255, 187, 0) 100%);
-    position: fixed;
+    position: sticky;
     margin-top: auto;
     z-index: 100;
 }
@@ -95,7 +95,7 @@ input{
 }
 
 #destacados{
-    padding-top: 98.242px;
+    padding-top: 20px;
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -156,9 +156,7 @@ h2{
 }
 
 @media(max-width: 830px ){
-    .principal{
-        position: static;
-    }
+
     
     #menu{
         flex-direction: column;

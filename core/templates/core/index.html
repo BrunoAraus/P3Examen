@@ -3,7 +3,6 @@
 
 
 {% block contenido %}
-        
 <div id="destacados">
   <h3>Destacados</h3>
 </div>
@@ -42,9 +41,10 @@
         <img src="{{c.imagen}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{c.nombre}}</h5>
-          <p class="card-text">Precio: ${{c.precio}}</p>
           {% if c.descuento > 0 %}
           <p class="card-text">Precio descuento: $ {{c.precio_final}}</p>
+          {% else %}
+          <p class="card-text">Precio: ${{c.precio}}</p>
           {% endif %}
           <p class="card-text">Stock: ${{c.stock}}</p>
           {% if c.descuento > 0 %}
