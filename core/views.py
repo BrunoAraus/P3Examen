@@ -54,7 +54,7 @@ def modificarProducto(request, id):
             producto.save()
             contexto["mensaje"] = "producto modificado!."
             contexto['form'] = producto
-    return render(request, 'core/modificarProducto.html', contexto)
+    return render(request, 'core/modificarProducto.html', contexto) 
 
 def eliminarProducto(request, id):
     producto = Producto.objects.get(nombre=id)
@@ -73,6 +73,8 @@ def descontar(request, id):
     producto.save()
     return redirect(to="home")
 
-
-
-
+def descuento(request,id):
+    producto = Producto.objects.get(nombre=id)
+    producto.precio_final = producto.precio - (producto.precio * producto.descuento/100)
+    producto.save()
+    return redirect(to="home")

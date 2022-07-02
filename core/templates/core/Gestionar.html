@@ -23,6 +23,7 @@
             <th>Categoria</th>
             <th>Editar</th>
             <th>Eliminar</th>
+            
         </tr>
         {% for i in producto %}
         <tr>
@@ -31,8 +32,9 @@
             <td>{{i.stock}}</td>
             <td>{{i.descuento}}</td>
             <td>{{i.categoria}}</td>
-            <td><a href="{% url 'modificarProducto' i.nombre %}">Modificar</a></td>
+            <td><a href="{% url 'modificarProducto' i.nombre %}" style="color:blue;">Modificar</a ></td>
             <td><a href="{% url 'eliminarProducto' i.nombre %}">Eliminar</a></td>
+            <td><a href="{% url 'descuento' i.nombre %}" style="color:blue;">Aplicar descuento</a></td>
         </tr>
         {% endfor %}
     </table>
