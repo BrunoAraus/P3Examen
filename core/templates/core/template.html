@@ -18,7 +18,7 @@
     <div class="principal">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffffff00;">
         <a id="titulo" href="{% url 'home' %}">
-        <img src="{% static 'core/img/Comida.png' %}" alt="logo" width="90px">
+        <img src="{% static 'core/img/logo.png' %}" alt="logo" width="90px">
         <div>Mascotas Amigas</div>
         </a>
         <div id="menu">
@@ -33,10 +33,16 @@
             <li class="nav-item">
             {% if user.is_authenticated %}
                 <b>{{user.username}}</b>
+            </li>
+            <li class="nav-item">
                 <a href="{% url 'logout' %}">Cerrar sesion</a>
+            </li>
             {% else %}
+            <li class="nav-item">
                 <a href="{% url 'login' %}">Iniciar Sesion</a>
+            </li>
             {% endif %}
+            
             </li>
             <li class="nav-item">
                 {% if user.is_authenticated %}

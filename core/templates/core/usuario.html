@@ -9,14 +9,16 @@
         <h1 id="titulo">Datos de Usuario</h1>
         <div id="misDatos">
             <div id="izquierda">
-                <p>Nombre: </p>
+                <p>Nombre de usuario: </p>
             </div>
             <div id="derecha">
                 <p>{{user.username}}</p>
             </div>
         </div>
         {% if not user.is_staff %}
+        <div>
         <button><a href="#">Suscribir</a></button>
+        </div>
         {% else %}
         <div id="Botones">
             <button><a href="{% url 'Gestionar' %}">Gestionar Producto</a></button>

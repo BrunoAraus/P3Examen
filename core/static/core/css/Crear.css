@@ -5,11 +5,13 @@
 
 .cuerpo{
     padding-top: 10%;
-    background-image: url("https://img.freepik.com/free-vector/fast-food-sketches-seamless-pattern-delicious-food-colored-ornament-hand-drawn-vector-illustration-modern-style-design-decor-wallpaper-background-textile_534604-529.jpg?w=2000");
+    background-color: rgba(231, 189, 71, 0.616);   
     min-height: 100vh;
 }
 
 .container{
+    display: flex;
+    padding-top: 12px;
     background-color: #272727e3;
     color: white;
 }

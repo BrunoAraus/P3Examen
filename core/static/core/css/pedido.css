@@ -4,17 +4,18 @@
 }
 body{
     overflow: auto;
+    background-color: rgba(240, 248, 255, 1 );
 }
 
 #cuerpo{
     background-color: rgba(240, 248, 255, 1 );
-    min-height: 110vh;
+    min-height: 100%;
     overflow: auto;
 }
 
 #fondo_carrito{
     background-color: rgba(240, 248, 255, 0.966);
-    padding: 100px 10px 10px 10px;
+    padding: 110px 10px 10px 10px;
     display: flex;
     justify-content: space-evenly;
 }

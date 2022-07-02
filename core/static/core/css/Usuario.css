@@ -31,13 +31,13 @@
 }
 
 #izquierda{
-    padding-right: 20px;
+    padding-right: 10px;
     text-align: start;
 }
 
 #derecha{
     text-align: left;
-    padding-left: 0.3px;
+    padding-left: 2px
 }
 
 #izquierda>p, #derecha>p{
@@ -45,25 +45,37 @@
 }
 
 #izquierda>p{
-    border-radius: 10px;
-    background-color: cadetblue;
+    border-radius: 1px;
+    background:  rgb(255, 187, 0);
 }
 
 #derecha>p{
     background-color: #ffffff;
 }
-
+#botones{
+    justify-content: space-evenly;
+    display: flex;
+}
+a:visited{
+    color: black;
+}
 button{
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
-    background-color:salmon;
-
+    border-radius: 1px;
+    background:  rgb(255, 187, 0);
+    color: black;
 }
-
+a:visited{
+    color: white;
+}
 button>a{
     text-decoration: none;
-    color: #ffffff;   
+    color: white;
+}
+
+b{
+    color: white;
 }
 
 
@@ -74,6 +86,7 @@ button>a{
         position: sticky;
     }
 }
+
 
     
 @media(max-width: 1200px){
