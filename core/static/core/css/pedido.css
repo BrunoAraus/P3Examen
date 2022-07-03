@@ -36,6 +36,7 @@ body{
 #carrito_right{
     padding: 10px 20px 10px 20px;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.082);
     width: 33%;
@@ -67,9 +68,8 @@ body{
 
 .resumen_compra{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 25px;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .total{

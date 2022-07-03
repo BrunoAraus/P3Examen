@@ -23,3 +23,15 @@ h5{
 .table-hover{
     background-color: white;
 }
+
+@media(max-width: 830px ){
+
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 12px;
+        background-color: #272727e3;
+        color: white;
+    }
+}
