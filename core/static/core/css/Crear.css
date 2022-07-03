@@ -11,7 +11,6 @@
 }
 
 .container{
-    display: flex;
     padding-top: 12px;
     background-color: #272727e3;
     color: white;
@@ -33,5 +32,10 @@ h5{
         padding-top: 12px;
         background-color: #272727e3;
         color: white;
+    }
+
+    .tabla{
+        font-size: 60%;
+        width: 60%;
     }
 }
