@@ -9,7 +9,7 @@
         <div id="contenedor_fondo">
             <div id="fondo_carrito">
                 <div id="carrito_left">
-                    <div class="titulo"><p>Tu Carrito</p><hr></div>
+                    <div class="titulo"><p>Historial de compra</p><hr></div>
                     <div id="lista_venta">
 
                         <div class="descripcion">
@@ -17,8 +17,8 @@
                             <div class="info">
                                 <h6>"Plato Normal"</h6>
                                 <h7>Precio = $12.000</h7>
-                                <p id="disponible">Estado: Disponible</p>
-                                <p>stock: 18 unidades</p>
+                                <p id="disponible">Estado: Entregado</p>
+                                <p>stock: 1 unidad</p>
                                 <p class="desc">Descuento: No disponible</p>
                                 <div class="col-md-2">
                                 </div>
@@ -29,13 +29,14 @@
                         <hr>
                         
                         <div class="descripcion">
-                            <img src="https://static.miscota.com/media/1/photos/products/109869/collar-perro-reflectante-rosa_1_g.jpeg" class="rounded" alt="" width="15%"> 
+                            <img src="https://static.miscota.com/media/1/photos/products/109869/collar-perro-reflectante-rosa_1_g.jpeg" class="rounded" alt="" width="15%" style="height:70%;"> 
                             <div class="info">
                                 <h6>"Collar aestetic"</h6>
                                 <h7>Precio = $16.100</h7>
-                                <p id="disponible">Estado: Disponible</p>
-                                <p>stock: 23 unidades</p>
+                                <p id="disponible">Estado: En Proceso</p>
+                                <p>stock: 2 unidades</p>
                                 <p class="desc">Descuento: No disponible</p>
+                                <p>Tiempo Estimado = 3 Dias</p>
                                 <div class="col-md-2">
                                     </select>
                                 </div>
@@ -48,8 +49,8 @@
                             <div class="info">
                                 <h6>"Hueso grande"</h6>
                                 <h7>Precio = $16.100</h7>
-                                <p id="disponible">Estado: Disponible</p>
-                                <p>stock: 12 unidades</p>
+                                <p id="disponible">Estado: Entregado</p>
+                                <p>stock: 3 unidades</p>
                                 <p class="desc">Descuento: No disponible</p>
                                 <div class="col-md-2">
                                     </select>
@@ -62,24 +63,16 @@
                 <div id="carrito_right">
                     <h5>Resumen de Pedidos</h5>
                     <div class="resumen_compra">
-                        <h6>3 Artículos</h6>
-                        <p>$ 28.100</p>
-                    </div>
-                    <div class="resumen_compra">
-                        <h6>Estado de entrega</h6>
-                        <p>En Camino</p>
-                    </div>
-                    <div class="resumen_compra">
-                        <h6>Tiempo Estimado</h6>
-                        <p>~15 Minutos</p>
+                        <h6>6 Artículos</h6>
+                        <p>$ 92.500</p>
                     </div>
                     <hr>
                     <div class="total">
                         <p>Total</p>
-                        <p>$ 30.900</p>
+                        <p>$ 92.500</p>
                     </div>
                     <div class="button">
-                        <button type="submit" class="btn btn-info" ><a href="{% url 'home' %}" style="color:black ; font-size: large;">Finalizar Compra</a></button>
+                        <button type="submit" class="btn btn-info" ><a href="{% url 'home' %}" style="color:black ; font-size: large;">Imprimir boleta</a></button>
                     </div>
                 </div>
                 
