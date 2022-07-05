@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'core',
     'crispy_forms',
+    'rest_suscripcion',
 ]
 
 LOGIN_REDIRECT_URL = 'home'
