@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from core.forms import ProductoForm, SuscripcionForm
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, HttpResponse
 
 
 def registro(request):
@@ -89,3 +90,5 @@ def suscribir(request):
     return render(request, 'core/suscribir.html', contexto)
 
     
+def carrito(request):
+    return render(request, "pedido.html")

@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class Categoria(models.Model):
     idCategoria = models.IntegerField(primary_key=True)
     nombreCategoria = models.CharField(max_length=20)
@@ -28,10 +29,3 @@ class Suscripciones(models.Model):
     def __str__(self) -> str:
         return self.codigo
 
-
-
-
-
-
-
-    
