@@ -1,11 +1,9 @@
 from django.shortcuts import render, redirect
-from core.Carrito import Carrito
 from core.forms import ProductoForm, SuscripcionForm
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, HttpResponse
 from core.models import Producto
-from core.Carrito import Carrito
 
 
 def registro(request):
@@ -91,32 +89,3 @@ def suscribir(request):
             Suscripcion.save()
             contexto["mensaje"] = "Suscripcion Realizada!."
     return render(request, 'core/suscribir.html', contexto)
-
-# Carrito de compras
-
-def carrito(request):
-    productos = Producto.objects.all()
-    return render(request, "pedido.html", {'productos':productos})
-
-def agregar_prducto(request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.agregar(producto)
-    return redirect("Carrito")
-
-def eliminar_producto(request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.eliminar(producto)
-    return redirect("Carrito")
-
-def restar_producto(request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.restar(producto)
-    return redirect("Carrito")
-
-def limpiar_carrito(request):
-    carrito = Carrito(request) 
-    carrito.limpiar()
-    return redirect("Carrito")
