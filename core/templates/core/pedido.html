@@ -3,15 +3,55 @@
 
 {% block contenido %}
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="{% static 'core/css/pedido.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-    <div id="cuerpo">
+<body>
+    <div id="container">
+        <!--
+        <div class="row">
+            <div class="col-12 align-self-center">
+                <h1 class="display-1">PEDIDO</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="row" style="padding: 10px 0;">
+                    <div class="col-12">
+                        <div class="row">
+                            {% for producto in productos %}
+                            <div class="col-6">
+                                <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{producto.nombre}}</h5>
+                                        <p class="card-text">{{producto.categoria}}</p>
+                                        <p class="card-text">{{producto.precio}}</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+                { % include "carrito.html" % }
+                
+            </div>
+        </div>
+        -->
+        
         <div id="contenedor_fondo">
             <div id="fondo_carrito">
                 <div id="carrito_left">
                     <div class="titulo"><p>Historial de compra</p><hr></div>
                     <div id="lista_venta">
-
                         <div class="descripcion">
                             <img src="https://faunasalud.cl/wp-content/uploads/2020/08/692112-MLC43124049800_082020-O.jpg" class="rounded" alt="" width="15%">                        
                             <div class="info">
@@ -23,11 +63,8 @@
                                 <div class="col-md-2">
                                 </div>
                             </div>
-
                         </div>
-
                         <hr>
-                        
                         <div class="descripcion">
                             <img src="https://static.miscota.com/media/1/photos/products/109869/collar-perro-reflectante-rosa_1_g.jpeg" class="rounded" alt="" width="15%" style="height:70%;"> 
                             <div class="info">
@@ -43,7 +80,6 @@
                             </div>
                         </div>
                         <hr>
-                        
                         <div class="descripcion">
                             <img src="https://7483c243aa9da28f329c-903e05bc00667eb97d832a11f670edad.ssl.cf1.rackcdn.com/20216528_1-XyVpHOYD-large.jpg" class="rounded" alt="" width="15%"> 
                             <div class="info">
@@ -75,13 +111,16 @@
                         <button type="submit" class="btn btn-info" ><a href="{% url 'home' %}" style="color:black ; font-size: large;">Imprimir boleta</a></button>
                     </div>
                 </div>
-                
             </div> 
             <div id="volver">
                 <div>
                     <button type="submit" class="btn btn-info" href=""><a href="{% url 'home' %}" style="color:black ; font-size: large;">seguir comprando</a></button>
                 </div>
             </div>
-        </div>        
-    </div>    
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
 {% endblock %}
