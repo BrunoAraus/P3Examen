@@ -46,7 +46,7 @@
           {% else %}
           <p class="card-text">Precio: ${{c.precio}}</p>
           {% endif %}
-          <p class="card-text">Stock: ${{c.stock}}</p>
+          <p class="card-text">Stock: {{c.stock}}</p>
           {% if c.descuento > 0 %}
           <p class="card-text">Descuento: {{c.descuento}}%</p>
           {% endif %}

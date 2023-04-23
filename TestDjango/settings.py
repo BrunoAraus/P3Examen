@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'crispy_forms',
-    'rest_suscripcion',
 ]
 
 LOGIN_REDIRECT_URL = 'home'
@@ -74,6 +73,13 @@ TEMPLATES = [
         },
     },
 ]
+
+BOOTSTRAP4 = {
+    'template_pack': 'bootstrap4',
+    'html5_required': True,
+    'error_css_class': 'text-danger',
+}
+
 
 WSGI_APPLICATION = 'TestDjango.wsgi.application'
 
