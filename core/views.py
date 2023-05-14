@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from core.forms import ProductoForm, SuscripcionForm
+from core.forms import *
 from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, HttpResponse
