@@ -7,6 +7,7 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from core.models import Suscripciones
 from .serializers import SuscripcionesSerializer
+
 @csrf_exempt
 @api_view(['GET','POST'])
 def lista_sus(request):
@@ -43,5 +44,10 @@ def detalle_sus(request,id):
     elif request.method == 'DELETE':
         sus.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+
+
+
 
 
